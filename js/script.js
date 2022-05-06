@@ -50,3 +50,42 @@ function playRound(playerSelection, computerSelection) {
        return(`You lose - ${computerSelection} beats ${playerSelection}`);
     }
 }
+
+/* Function plays 5 games and keeps score */
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        let player = playerPlay();
+        let computer = computerPlay();
+
+        let round = playRound(player, computer);
+        
+        let starTie = round.startsWith("Game tied");
+        let startPlayer = round.startsWith("You win");
+        let startComputer = round.startsWith("You lose");
+
+        console.log("----- ROUND " + (i + 1) + " -----")
+        if (starTie) {
+            // TIE
+            console.log(round);
+            console.log("player score: ", playerScore);
+            console.log("computer score: " + computerScore);
+        } else  if (startPlayer) {
+            // PLAYER WIN
+            playerScore++;
+            console.log(round);
+            console.log("player score: ", playerScore);
+            console.log("computer score: " + computerScore);
+        } else if (startComputer) {
+            // COMPUTER WIN
+            computerScore++;
+            console.log(round);
+            console.log("player score: ", playerScore);
+            console.log("computer score: " + computerScore);
+        }
+    }
+}
+
+game();
