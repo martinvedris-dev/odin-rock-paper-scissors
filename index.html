@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Odin - Rock Paper Scissors</title>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1 class="title"><a href="./index.html">ROCK, PAPER, SCISSORS</a></h1>
+        </header>
+        <div class="score-board">
+            <h2 class="score-title">Score</h2>
+            <div class="score">
+                <div class="player">Player: <span class="player-score">0</span></div>
+                <div class="computer">Computer: <span class="computer-score">0</span></div>
+            </div>
+            
+        </div>
+        <div class="buttons">
+            <div class="button" id="rock">
+                <img src="./img/rock.png" alt="rock emoji">
+            </div>
+            <div class="button" id="paper">
+                <img src="./img/paper.png" alt="paper emoji">
+            </div>
+            <div class="button" id="scissors">
+                <img src="./img/scissors.png" alt="scissors emoji">
+            </div>
+        </div>
+        <div class="round-outcome-log">
+            
+        </div>
+        <footer>
+            <a href="https://github.com/martinvedris-dev" ><img class="github-icon" src="./img/github-icon.png" alt=""></a>
+            <p>Created by Martin Vedriš</p>
+        </footer>
+    </div>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
