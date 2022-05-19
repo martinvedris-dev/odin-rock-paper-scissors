@@ -14,6 +14,9 @@ rockElement.addEventListener('click', () => playRound('rock', computerPlay()));
 paperElement.addEventListener('click', () => playRound('paper', computerPlay()));
 scissorsElement.addEventListener('click', () => playRound('scissors', computerPlay()));
 
+/* Game rules with alert */
+alert("First to 5 wins");
+
 /* Function returns random value from and array - simulate computer play */
 function computerPlay() {
     return ["rock", "paper", "scissors"][Math.floor(Math.random() * 3)];
